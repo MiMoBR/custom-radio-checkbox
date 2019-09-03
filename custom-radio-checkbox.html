@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Custom Radio and Checkbox</title>
+
+		<style type="text/css">
+			/*		CHECKBOX		*/
+			.checkmarkOriginal {
+			    opacity: 0;
+			    z-index: 1;
+			    height: 25px;
+			    width: 25px;
+			}
+			/* Create a custom checkbox */
+			.checkmark {
+				position: absolute;
+				height: 25px;
+				width: 25px;
+				background-color: #454e55;
+			}
+			/* When the checkbox is checked, add a blue background */
+			.checkmarkOriginal:checked ~ .checkmark {
+				background-color: #454e55;
+			}
+			/* Show the checkmark when checked */
+			.checkmarkOriginal:checked ~ .checkmark:after {
+				display: block;
+			}
+			/* Create the checkmark/indicator (hidden when not checked) */
+			.checkmark:after {
+				content: "";
+				position: absolute;
+				display: none;
+			}
+			/* Style the checkmark/indicator */
+			.checkmark:after {
+				left: 8px;
+				top: 3px;
+				width: 10px;
+				height: 15px;
+				border: solid white;
+				border-width: 0 3px 3px 0;
+				-webkit-transform: rotate(45deg);
+				-ms-transform: rotate(45deg);
+				transform: rotate(45deg);
+			}
+			.checkmarkOriginal:checked:disabled ~ .checkmark:after {
+				left: 8px;
+				top: 3px;
+				width: 10px;
+				height: 15px;
+				border: solid #9E9E9E;
+				border-width: 0 3px 3px 0;
+				-webkit-transform: rotate(45deg);
+				-ms-transform: rotate(45deg);
+				transform: rotate(45deg);
+			}
+
+			/*		RADIO		*/
+			.radiomarkOriginal {
+			    opacity: 0;
+			    z-index: 1;
+			    height: 25px;
+			    width: 25px;
+			}
+			/* Create a custom checkbox */
+			.radiomark {
+				position: absolute;
+				height: 25px;
+				width: 25px;
+				border-radius: 30px;
+				background-color: #454e55;
+			}
+			/* When the checkbox is checked, add a blue background */
+			.radiomarkOriginal:checked ~ .radiomark {
+				background-color: #454e55;
+			}
+			/* Show the radiomark when checked */
+			.radiomarkOriginal:checked ~ .radiomark:after {
+				display: block;
+			}
+			/* Create the radiomark/indicator (hidden when not checked) */
+			.radiomark:after {
+				content: "";
+				position: absolute;
+				display: none;
+			}
+			/* Style the radiomark/indicator */
+			.radiomark:after {
+				left: 8px;
+				top: 3px;
+				width: 10px;
+				height: 15px;
+				border: solid white;
+				border-width: 0 3px 3px 0;
+				-webkit-transform: rotate(45deg);
+				-ms-transform: rotate(45deg);
+				transform: rotate(45deg);
+			}
+			.radiomarkOriginal:checked:disabled ~ .radiomark:after {
+				left: 8px;
+				top: 3px;
+				width: 10px;
+				height: 15px;
+				border: solid #9E9E9E;
+				border-width: 0 3px 3px 0;
+				-webkit-transform: rotate(45deg);
+				-ms-transform: rotate(45deg);
+				transform: rotate(45deg);
+			}
+		</style>
+
+	</head>
+	<body>
+		<div class="">
+			<label>CheckBox</label>
+			<div style="display: flex; justify-content: center;width: 241px; align-items: center;">
+				<label for="abc">ABC</label>
+				<div style="display: flex;">
+					<input id="abc" type="checkbox" class="checkmarkOriginal">
+					<span class="checkmark"></span>
+				</div>
+			</div>
+			<div style="display: flex; justify-content: center;width: 241px; align-items: center;">
+				<label for="def">DEF</label>
+				<div style="display: flex;">
+					<input id="def" type="checkbox" class="checkmarkOriginal">
+					<span class="checkmark"></span>
+				</div>
+			</div>
+			<div style="display: flex; justify-content: center;width: 241px; align-items: center;">
+				<label for="ghi">GHI</label>
+				<div style="display: flex;">
+					<input id="ghi" type="checkbox" class="checkmarkOriginal">
+					<span class="checkmark"></span>
+				</div>
+			</div>
+		</div>
+		<div class="">
+			<label>Radio</label>
+			<div style="display: flex; justify-content: center;width: 241px; align-items: center;">
+				<label for="abcR">ABC</label>
+				<div style="display: flex;">
+					<input id="abcR" name="radioR" type="radio" class="radiomarkOriginal">
+					<span class="radiomark"></span>
+				</div>
+			</div>
+			<div style="display: flex; justify-content: center;width: 241px; align-items: center;">
+				<label for="defR">DEF</label>
+				<div style="display: flex;">
+					<input id="defR" name="radioR" type="radio" class="radiomarkOriginal">
+					<span class="radiomark"></span>
+				</div>
+			</div>
+			<div style="display: flex; justify-content: center;width: 241px; align-items: center;">
+				<label for="ghiR">GHI</label>
+				<div style="display: flex;">
+					<input id="ghiR" name="radioR" type="radio" class="radiomarkOriginal">
+					<span class="radiomark"></span>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
